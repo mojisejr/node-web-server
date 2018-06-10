@@ -50,6 +50,14 @@ app.get('/about', (req, res) => {
    });
 });
 
+app.get('/my-profile', (req, res) => {
+   res.render('my-profile.hbs', {
+       pageTitle: 'My-Profile',
+       name: 'nonthasak',
+       email: 'nonthasak.l@gmail.com',
+       address: 'Thailand'
+   }); 
+});
 //create route /bad -send back json with errMsg
 app.get('/bad', (req, res) => {
    res.send({
